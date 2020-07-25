@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>HTML</h1>
+    <div>
+      <h2>BEM</h2>
+      <div>
+        <h3>block</h3>
+        <p>Отв на вопрос что?</p>
+
+        <ul>
+          <li>
+            <p>Можно описать по смыслу</p>
+          </li>
+          <li>
+            <p>Сохранит смысл при перемещении</p>
+          </li>
+          <li>
+            <p>Есть завершенный функционал</p>
+          </li>
+          <li>
+            <p>Блок блока через дефис sub-menu</p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3>block_ _element</h3>
+        <p>Отв на вопрос что?</p>
+        <ul>
+          <li><p>Без контекста непонятно для чего нужен</p></li>
+        </ul>
+      </div>
+      <div>
+        <h3>block_ _element--modificator</h3>
+        <p>Отв на вопрос какой?</p>
+        <h3>block_ _element_modificator_value</h3>
+        <p>Если несколько модификаций</p>
+      </div>
+    </div>
+    <div >
+      <h2>CSS</h2>
+      <div>
+        <h3>Selectors</h3>
+        <ul>
+          <li>
+            <p>.main.title{} селектор тега при наличии обоих классов</p>
+          </li>
+          <li>
+            <p>.main a{} селектор вложености где? _ что? независимо от типов id class tag</p>
+          </li>
+          <li>
+            <p>.link:bedore{contant:"";} .link:after{contant:"";} селектор псевдоелементов</p>
+            <p>
+              div class="link" <br>
+              ::before <br>
+              a class="title"/a <br>
+              ::after <br>
+              /div <br>
+            </p>
+              <p>Добавит псевдоелемент в елемент до контента. Обязательно свойство contant</p>
+            </li>
+            <li>
+              <p> ul > li селектор прямого потомка</p>
+            </li>
+            <li>
+              <p>.test + .sibling блок соседа - выберет только sibling после test </p>
+            </li>
+        </ul>
+      </div>
+
+    </div>
+
+</body>
+</html>
