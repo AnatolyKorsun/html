@@ -1,80 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML & CSS</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <h1>HTML</h1>
-    <div>
-      <h2>BEM</h2>
-      <div>
-        <h3>block</h3>
-        <p>Отв на вопрос что?</p>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Ranchers&family=Yanone+Kaffeesatz:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section id="bem">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1>HTML</h1>
+            <div>
+              <h2>BEM</h2>
+              <div>
+                <h3>block_ _</h3>
+                <p>Отв на вопрос что?</p>
+                <ul>
+                  <li>
+                    <p>Можно описать по смыслу</p>
+                  </li>
+                  <li>
+                    <p>Сохранит смысл при перемещении</p>
+                  </li>
+                  <li>
+                    <p>Есть завершенный функционал</p>
+                  </li>
+                  <li>
+                    <p>Блок блока через дефис sub-menu</p>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3>block_ _element</h3>
+                <p>Отв на вопрос что?</p>
+                <ul>
+                  <li><p>Без контекста непонятно для чего нужен</p></li>
+                </ul>
+              </div>
+              <div>
+                <h3>block_ _element--modificator</h3>
+                <p>Отв на вопрос какой?</p>
+                <h3>block_ _element_modificator_value</h3>
+                <p>Если несколько модификаций</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="css">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div>
+              <h2>CSS</h2>
+              <div>
+                <h3>Selectors</h3>
+                <ul>
+                  <li>
+                    <p>.main.title{} селектор тега при наличии обоих классов</p>
+                  </li>
+                  <li>
+                    <p>
+                      .main a{} селектор вложености где? _ что? независимо от
+                      типов id class tag
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      .link:bedore{contant:"";} .link:after{contant:"";}
+                      селектор псевдоелементов
+                    </p>
+                    <p>
+                      div class="link" <br />
+                      ::before <br />
+                      a class="title"/a <br />
+                      ::after <br />
+                      /div <br />
+                    </p>
+                    <p>
+                      Добавит псевдоелемент в елемент до контента. Обязательно
+                      свойство contant
+                    </p>
+                  </li>
+                  <li>
+                    <p>ul > li селектор прямого потомка</p>
+                  </li>
+                  <li>
+                    <p>
+                      .test + .sibling блок соседа - выберет только sibling
+                      после test
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="flexbox">
+      <div class="container">
+        <div class="row">
+          <div class="colmd-12 text-center">
+            <div>
+              <h2>Flexbox</h2>
+              <div class="flex-wrap">
+                <div class="flex-container">
+                  <div class="flex-item">item 1</div>
+                  <div class="flex-item">item 2</div>
+                  <div class="flex-item">item 3</div>
+                </div>
+                <ul>
+                  <li>
+                    <h4>display: flex</h4>
+                    <p>задает флексконтейнер с елементами block</p>
+                  </li>
+                  <li>
+                    <h4>display: inline-flex</h4>
+                    <p>задает флексконтейнер с елементами inline-block</p>
+                  </li>
+                  <li>
+                    <h4>НАПРАВЛЕНИЕ СТРОК</h4>
+                    <h4>flex-direction: row</h4>
+                    <p>
+                      задает горизонтальный порядок елементов слева
+                      направо(default)
+                    </p>
+                  </li>
+                  <li>
+                    <h4>flex-direction: row-reverse</h4>
+                    <p>задает горизонтальный порядок елементов справа налево</p>
+                  </li>
+                  <li>
+                    <h4>flex-direction: column</h4>
+                    <p>задает вертикальный порядок елементов сверху вниз</p>
+                  </li>
+                  <li>
+                    <h4>flex-direction: column-reverse</h4>
+                    <p>задает вертикальный порядок елементов снизу вверх</p>
+                  </li>
+                  <li>
+                    <h4>ПЕРЕНОС СТРОК</h4>
+                    <h4>flex-wrap: nowrap</h4>
+                    <p>запрещает перенос елементов из основной оси (default)</p>
+                  </li>
+                  <li>
+                    <h4>flex-wrap: wrap</h4>
+                    <p>разрешает перенос елементов из основной оси (default)</p>
+                  </li>
+                  <li>
+                    <h4>flex-wrap: wrap-reverse</h4>
+                    <p>
+                      разрешает перенос елементов из основной оси на новую
+                      строку(обратный порядок строк)
+                    </p>
+                  </li>
+                  <li>
+                    <h4>ОСНОВНАЯ ОСЬ</h4>
+                    <h4>justify-content: flex-start</h4>
+                    <p>елементы выравниваются от начала главной оси(default)</p>
+                  </li>
+                  <li>
+                    <h4>justify-content: flex-end</h4>
+                    <p>елементы выравниваются от конца главной оси</p>
+                  </li>
+                  <li>
+                    <h4>justify-content: center</h4>
+                    <p>елементы выравниваются по центру главной оси</p>
+                  </li>
+                  <li>
+                    <h4>justify-content: space-between</h4>
+                    <p>
+                      елементы выравниваются по главной оси, растояния между
+                      парами одинаково, последние по краях
+                    </p>
+                  </li>
+                  <li>
+                    <h4>justify-content: space-around</h4>
+                    <p>
+                      елементы выравниваются по главной оси, растояния между
+                      парами одинаково, последние по краях половина растояния
+                    </p>
+                  </li>
+                  <li>
+                    <h4>justify-content: space-evenly</h4>
+                    <p>
+                      елементы выравниваются по главной оси, растояния между
+                      парами и по концах одинаково
+                    </p>
+                  </li>
+                  <li>
+                    <h4>ДОПОЛНИТЕЛЬНАЯ ОСЬ</h4>
+                    <h4>align-items: stretch</h4>
+                    <p>
+                      елементы строке вытягиваются на всю высоту доп
+                      оси(задавать min-width и min-height)(default)
+                    </p>
+                  </li>
+                  <li>
+                    <h4>align-items: flex-start</h4>
+                    <p>елементы строке выравниваются от начала доп. оси</p>
+                  </li>
+                  <li>
+                    <h4>align-items: flex-end</h4>
+                    <p>елементы строке выравниваются от конца доп. оси</p>
+                  </li>
+                  <li>
+                    <h4>align-items: center</h4>
+                    <p>елементы строке выравниваются от конца доп. оси</p>
+                  </li>
+                  <li>
+                    <h4>align-items: baseline</h4>
+                    <p>
+                      елементы строке выравниваются по базовой верхней линии
+                      контента
+                    </p>
+                  </li>
+                  <li>
+                    <h4>align-self: flex-start</h4>
+                    <p>
+                      изменяет align-items для отдельного елемента, доступно
+                      flex-start flex-end
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Ось должна состоять из нескольких строк. Меняет размер
+                      строки не елемента.
+                    </p>
+                    <h4>align-content: flex-start</h4>
+                    <p>строки выравниваются от начала доп оси(default)</p>
+                  </li>
+                  <li>
+                    <h4>align-content: flex-end</h4>
+                    <p>строки выравниваются от конца доп оси</p>
+                  </li>
+                  <li>
+                    <h4>align-content: center</h4>
+                    <p>строки выравниваются по центру доп оси</p>
+                  </li>
+                  <li>
+                    <h4>align-content: stretch</h4>
+                    <p>строки вытягиваются чтобы занять всю доп ось</p>
+                  </li>
+                  <li>
+                    <h4>align-content: space-between</h4>
+                    <p>строки выравниваются по краям доп оси</p>
+                  </li>
+                  <li>
+                    <h4>align-content: space-around</h4>
+                    <p>
+                      строки по доп оси? растояние между строками одинаковое,
+                      крайние половина растояния
+                    </p>
+                  </li>
+                  <li>
+                    <h4>ПОРЯДОК В СТРОКЕ</h4>
+                    <p>
+                      Положение отдельного елемента в строке. У всех по
+                      умолчанию 1.
+                    </p>
+                    <h4>order: 2</h4>
+                    <p>больше число перенесет в конец строки</p>
+                  </li>
+                  <li>
+                    <h4>order: -1</h4>
+                    <p>отрицательное число перенесет в начало строки</p>
+                  </li>
+                  <li>
+                    <h4>РАЗМЕРОВ ЕЛЕМЕНТОВ В СТРОКЕ</h4>
+                    <h4>flex-grow: 2</h4>
+                    <p>
+                      Пропорция ширины width елемента относительно других. Выше
+                      grow больше ширина, по умолчанию 0, отрицательных нет.
+                    </p>
+                  </li>
+                  <li>
+                    <h4>flex-shrink: 2</h4>
+                    <p>
+                      Пропорция ширины width елемента относительно других. Выше
+                      shrink меньше ширина, по умолчанию 1, отрицательных нет.
+                    </p>
+                  </li>
+                  <li>
+                    <h4>flex-basis: 50%</h4>
+                    <p>
+                      Пропорция ширины width елемента относительно строки.px,
+                      rem, em, %...
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="position">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2>Позиционирование</h2>
+            <div>
+              <div class="position-container">
+                <div class="position-item float-left"></div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, ipsa?</p>
+              </div>
+              <ul>
+                <li>
+                  <h2>position: relative</h2>
+                  <p>Относительное, предидущего положения, в потоке(от верхнего левого угла). Применимо к елементу. Доступно top:, left:, right:, bottom:.Совмещение противоположных сторон недоступно.После сдвига место останутся от елемента</p>
+                </li>
+                <li>
+                  <h2>position: absolute</h2>
+                  <p>Абсолютное, поднимает над потоком,соседние заполняют место. Доступно top:, left:, right:, bottom:(от границ елемента). Применимо к елементу, отсчет от первого предка со свойством отличным position:static.</p>
+                </li>
+                <li>
+                  <h2>position: absolute</h2>
+                  <p>При использовании противоположных значений top + bottom и left + right растянет елемент.</p>
+                </li>
+                <li>
+                  <h2>position: fixed</h2>
+                  <p>Фиксация относительно окна браузера.Доступно top:, left:, right:, bottom:.При использовании противоположных значений top + bottom и left + right растянет елемент относительно окна браузера.</p>
+                </li>
+                <li>
+                  <h2>position: sticky</h2>
+                  <p>Липкая фиксация относительно окна браузера в блоке родителя. Блок покидает екран с елементом.Применимо к елементу. Доступно top:, left:, right:, bottom:.Совмещение противоположных сторон недоступно.</p>
+                </li>
+                <li>
+                  <h2>position: static</h2>
+                  <p>Позиционирование по умолчанию. Для отмены других.</p>
+                </li>
+                <li>
+                  <h2>z-index:1</h2>
+                  <p>Для елементов с position перекравающих друг друга. Высше номер - высше елемент. Доступно отрицательное значение.</p>
+                </li>
+                <li>
+                  <h2>transform: translateX(100%)</h2>
+                  <p>сдвигает елемент по оси Х относительно себя</p>
+                </li>
+                <li>
+                  <h2>transform: translateY(100%)</h2>
+                  <p>сдвигает елемент по оси Y относительно себя</p>
+                </li>
+                <li>
+                  <h2>transform: translateX(100%) translateY(100%)</h2>
+                  <p>сдвигает елемент по оси Xи Y относительно себя</p>
+                </li>
+                <li>
+                  <h2>floattransform: translateX(100%) translateY(100%)</h2>
+                  <p>сдвигает елемент по оси Xи Y относительно себя</p>
+                </li>
+                <li>
+                  <h2 class="float-left" >float:left 1 </h2>
+                  <h2 class="float-left" >float:left 2 </h2>
+                  <p>нижний контент обтекает блок с float, блок с float слева сверху</p>
+                </li>
+                <li>
+                  <h2 class="float-right" >float:right 1 </h2>
+                  <h2 class="float-right" >float:right 2 </h2>
+                  <p>нижний контент обтекает блок с float, блок с float справа сверху</p>
+                </li>
+                <li>
+                  <h2 class="float-right" >float:right 1 </h2>
+                  <h2 class="float-none" >float:none  </h2>
+                  <p>значение по умолчанию, отмена действия float</p>
+                </li>
+                <li>
+                  <h2 class="float-left" >float:left </h2>
+                  <h2 class="clear-left" >clear:left </h2>
+                  <p>елемент будет находится ниже всех на которые действует  float:left</p>
+                </li>
+                <li>
+                  <h2 class="float-right" >float:right </h2>
+                  <h2 class="clear-right" >clear:right </h2>
+                  <p>елемент будет находится ниже всех на которые действует  float:right</p>
+                </li>
+                <li>
+                  <h2 class="float-left" >float:left </h2>
+                  <h2 class="float-right" >float:right </h2>
+                  <h2 class="clear-both" >clear:both </h2>
+                  <p>елемент будет находится ниже всех на которые действует  float:right и float:left</p>
+                </li>
+                <li>
+                  <div class="float-container clearfix">
+                    <h2 class="float-left" >float:left </h2>
+                    <p>Some text</p>
+                  </div>
+                  <h2 >clearfix </h2>
+                  <p>Зачистка  действий float:right и float:left происходит на елементе или контейнере классом clearfix. Используют псевдоелемент after после елемента или контейнера.</p>
+                </li>
 
-        <ul>
-          <li>
-            <p>Можно описать по смыслу</p>
-          </li>
-          <li>
-            <p>Сохранит смысл при перемещении</p>
-          </li>
-          <li>
-            <p>Есть завершенный функционал</p>
-          </li>
-          <li>
-            <p>Блок блока через дефис sub-menu</p>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h3>block_ _element</h3>
-        <p>Отв на вопрос что?</p>
-        <ul>
-          <li><p>Без контекста непонятно для чего нужен</p></li>
-        </ul>
-      </div>
-      <div>
-        <h3>block_ _element--modificator</h3>
-        <p>Отв на вопрос какой?</p>
-        <h3>block_ _element_modificator_value</h3>
-        <p>Если несколько модификаций</p>
-      </div>
-    </div>
-    <div >
-      <h2>CSS</h2>
-      <div>
-        <h3>Selectors</h3>
-        <ul>
-          <li>
-            <p>.main.title{} селектор тега при наличии обоих классов</p>
-          </li>
-          <li>
-            <p>.main a{} селектор вложености где? _ что? независимо от типов id class tag</p>
-          </li>
-          <li>
-            <p>.link:bedore{contant:"";} .link:after{contant:"";} селектор псевдоелементов</p>
-            <p>
-              div class="link" <br>
-              ::before <br>
-              a class="title"/a <br>
-              ::after <br>
-              /div <br>
-            </p>
-              <p>Добавит псевдоелемент в елемент до контента. Обязательно свойство contant</p>
-            </li>
-            <li>
-              <p> ul > li селектор прямого потомка</p>
-            </li>
-            <li>
-              <p>.test + .sibling блок соседа - выберет только sibling после test </p>
-            </li>
-        </ul>
-      </div>
 
-    </div>
 
-</body>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/jquery-3.5.1.js"></script>
+  </body>
 </html>

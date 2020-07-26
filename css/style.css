@@ -1,0 +1,213 @@
+/* flexbox------------------------------------------------------------------ */
+.flex-container{
+    display: flex;
+    /* display: inline-flex; */
+
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /* align-items: stretch; */
+    align-items: flex-start;
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    /* align-items: baseline; */
+
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: center; */
+    /* align-content: stretch; */
+    /* align-content: space-between; */
+    align-content: space-around;
+
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(22, 18, 18);
+    border-radius: 5px;
+    position: sticky;
+    top:0;
+    left: 100%;
+}
+
+.flex-item{
+    min-width: 50px;
+    min-height: 50px;
+    border: 1px solid blue;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.flex-item:nth-child(1){
+    min-height: 100px;
+    
+    /* order: -1; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* flex-basis: 30%; */
+}
+
+.flex-item:nth-child(2){
+    min-height: 80px;
+
+    /* order: 2; */
+    /* flex-grow: 2; */
+    /* flex-shrink: 2; */
+    /* flex-basis: 50%; */
+}
+
+.flex-item:nth-child(3){
+    min-height: 60px;
+
+    /* order: 3; */
+    /* flex-grow: 3; */
+    /* flex-shrink: 3; */
+    /* flex-basis: 10%; */
+    align-self: flex-end;
+}
+
+/* Position---------------------------------------------- */
+
+.position-container{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(22, 18, 18);
+    border-radius: 5px;
+    text-align: left !important;
+    position: sticky;
+    top:0;
+}
+
+.position-item{
+    display: inline-block;
+    min-width: 50px;
+    min-height: 50px;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+/* relative */
+.position-item{
+    /* position: relative; */
+    /* top:50%; */
+    /* left:50%; */
+    /* bottom: 50%; */
+    /* right: 50%; */
+}
+
+/* absolute */
+.position-container{
+    /* position: relative; */
+}
+.position-item{
+/* position: absolute; */
+/* top: 10px; */
+/* left:10px; */
+/* right:10px; */
+/* bottom: 10px; */
+}
+
+/* fixed */
+.position-item{
+    /* position: fixed; */
+    /* top: 0; */
+    /* left:0; */
+    /* right:50%; */
+    /* bottom: 0; */
+    }
+
+/* sticky */
+.position-container{
+    /* position: sticky;
+    top: 50px; */
+}
+
+/* transform */
+.position-item{
+    /* transform: translateX(-100%); */
+    /* transform: translateY(100%); */
+    /* transform: translateX(-50%) translateY(-50%); */
+}
+
+/* float */
+/* В bootstrap прописаны классы flot-left flot-right */
+ .float-left{
+    float: left;
+    margin: 10px;
+}
+
+.float-right{
+    float: right;
+    margin: 10px;
+} 
+
+/* float-none */
+.float-none{
+    float: none;
+    margin: 10px;
+} 
+
+/* clear-left */
+.clear-left{
+    clear:left;    
+} 
+
+/* clear-right */
+.clear-right{
+    clear: right;
+}
+
+/* clear-both */
+.clear-both{
+    clear: both;
+}
+
+/* clearfix */
+/* В bootstrap  класс clerfix прописан*/
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+
+
+/* this page styles------------------------------------- */
+a:hover{
+    text-decoration: none;
+  }
+  section{
+      margin-bottom: 30px;
+  }
+  section li{
+      border-radius: 25px;
+      padding: 15px;
+      margin-bottom: 20px;
+      list-style: none;
+      background: #ada996; 
+      background: -webkit-linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea); 
+      background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea); 
+  }
+
+  h1, h2, h3, h4{
+    font-family: 'Ranchers', cursive;
+    }
+    
+    p{
+    font-size: 24px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    }
